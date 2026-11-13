@@ -1,6 +1,9 @@
 function ModifText(letex) {
-    alert("je vais modifier la div");
-    document.getElementById("MaDiveNum1").textContent = letex;
+    const divs = document.getElementsByName("lesdivs");
+
+    for (let i = 0; i < divs.length; i++) {
+        divs[i].textContent = letex;
+    }
 }
 
 ModifText("Hello");
